@@ -1,0 +1,13 @@
+<div class="faq-component">
+    <input type="checkbox" [name]="faq?.id" [id]="faq?.id" class="faq-input" [formControl]="isChecked" />
+    <label class="title" [htmlFor]="faq?.id">
+        <app-text-basic-title *ngIf="isChecked.value" [text]="faq?.title || titleText" [isBold]="true" /> 
+        <app-text-basic-title *ngIf="!isChecked.value" [text]="faq?.title || titleText" [isBold]="false" />
+        <div class="icon">
+            <app-image imgAlt="arrow" imgSrc="/assets/img/icon-arrow-down.svg" />
+        </div>
+    </label>
+    <div class="content">
+        <app-text-basic [text]="faq?.description || descriptionText" />
+    </div>
+</div>

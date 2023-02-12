@@ -1,0 +1,10 @@
+.text-basic-title {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-1);
+  color: var(--color-neutral-dark-grayish-blue);
+}
+
+.text-basic-title.active {
+  color: var(--color-primary-very-dark-desaturated-blue);
+  font-weight: var(--font-weight-2);
+}

@@ -1,0 +1,28 @@
+.faq-component {
+  border-bottom: 1px solid var(--color-neutral-light-grayish-blue);
+  padding-bottom: 1rem;
+}
+
+.faq-component > .faq-input {
+  display: none;
+}
+
+.faq-component > .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-component > .faq-input:checked + .title > .icon {
+  rotate: 180deg;
+}
+
+.faq-component > .content {
+  overflow: hidden;
+}
+.faq-component > .faq-input:checked + .title + .content {
+  margin-top: 1rem;
+}
+.faq-component > .faq-input:not(:checked) + .title + .content {
+  height: 0;
+}

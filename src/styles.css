@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  /* Screen width */
+  --width-min: 375px;
+  --width-max: 1440px;
+  /* 
+    Color
+  */
+  /* Color text */
+  --color-primary-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --color-primary-soft-red: hsl(14, 88%, 65%);
+  /* color gradiant */
+  --color-primary-soft-violet: hsl(273, 75%, 66%);
+  --color-primary-soft-blue: hsl(240, 73%, 65%);
+  /* Color text */
+  --color-neutral-very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --color-neutral-dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Color dividers */
+  --color-neutral-light-grayish-blue: hsl(240, 5%, 91%);
+  /* 
+    Typography
+  */
+  --font-size: 12px;
+  --font-weight-1: 400;
+  --font-weight-2: 700;
+
+  /* 
+      Style cofig
+  */
+  --faq-header-image-width: 75%;
+}
