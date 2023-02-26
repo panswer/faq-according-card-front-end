@@ -1,20 +1,35 @@
 <div class="faq-page-component">
   <div class="faq-container">
-    <div class="image">
-      <app-image
-        imgAlt="FAQ image"
-        imgSrc="/assets/img/illustration-woman-online-mobile.svg"
-      ></app-image>
-    </div>
-    <div class="image-bg">
-      <app-image imgSrc="/assets/img/bg-pattern-mobile.svg"></app-image>
+    <div class="image-header">
+      <div class="image-box" *ngIf="innerWidth >= 1440">
+        <app-image
+          imgAlt="FAQ image box"
+          imgSrc="/assets/img/illustration-box-desktop.svg"
+        ></app-image>
+      </div>
+      <div class="image">
+        <app-image
+          imgAlt="FAQ image"
+          [imgSrc]="innerWidth >= 1440 ? faqImageDesktop : faqImageMobile"
+        ></app-image>
+      </div>
+      <div class="image-bg">
+        <app-image
+          imgAlt="FAQ image shadow"
+          [imgSrc]="innerWidth >= 1440 ? faqImageBgDesktop : faqImageBgMobile"
+        ></app-image>
+      </div>
     </div>
     <div class="content">
       <div class="page-title">
         <app-text-title text="faq"></app-text-title>
       </div>
       <div class="faqs">
-        <app-faq-component *ngFor="let item of FAQList" [faq]="item" class="item" ></app-faq-component>
+        <app-faq-component
+          *ngFor="let item of FAQList"
+          [faq]="item"
+          class="item"
+        ></app-faq-component>
       </div>
     </div>
   </div>

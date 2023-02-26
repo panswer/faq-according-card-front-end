@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.faq-page-component > .faq-container {
+.faq-container {
   background-color: white;
   min-width: 330px;
   min-height: 465px;
@@ -23,16 +23,21 @@
   margin: 4.5rem 2rem 0;
 }
 
-.faq-container > .image {
+.image-header {
   position: absolute;
   width: var(--faq-header-image-width);
+}
+
+.faq-container > .image-header > .image {
+  position: absolute;
+  width: 100%;
   top: -110px;
   z-index: 200;
 }
 
-.faq-container > .image-bg {
-  position: absolute;
-  width: var(--faq-header-image-width);
+.faq-container > .image-header > .image-bg {
+  position: relative;
+  width: 100%;
   z-index: 100;
   top: 0px;
 }
@@ -54,4 +59,40 @@
 .faq-container > .content > .faqs > .item {
   margin-top: 1rem;
   display: block;
+}
+
+@media only screen and (min-width: 1440px) {
+  .faq-container {
+    min-width: 900px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .image-header {
+    position: relative;
+  }
+
+  .faq-container > .image-header > .image {
+    top: auto;
+    left: -100px;
+  }
+
+  .faq-container > .image-header > .image-bg {
+    top: auto;
+    left: -100px;
+    margin-top: -30px;
+  }
+
+  .faq-container > .image-header > .image-box {
+    position: absolute;
+    z-index: 300;
+    left: -90px;
+    top: 120px;
+    width: 140px;
+  }
+
+  .faq-container > .content {
+    margin: 0 2rem 0 0;
+  }
 }
